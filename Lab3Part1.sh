@@ -1,12 +1,16 @@
 #!/bin/bash
 
+scriptSort(){
+  
+}
+
 while true; do
 
 if [[ $# -gt 1 ]]; then
   printf "Only pass 1 file in please\n"
   exit 127
 elif [[ $# -lt 1 ]]; then
-   printf "You need to Pass a file in!\n"
+   printf "Usage: ./Lab3Part1.sh [filename]"
    exit 127
 fi
 
@@ -22,13 +26,10 @@ printf "2) Perl sort\n"
 printf "3) Perl search\n"
 printf "4) Exit\n"
 
-
-
-
 read input
 
 if [[ $input -eq 1 ]]; then
- printf "worked\n"
+
 elif [[ $input -eq 2 ]]; then
   perl "Lab3Perl1.pl"
 
